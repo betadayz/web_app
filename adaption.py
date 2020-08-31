@@ -59,5 +59,6 @@ def del_pup():
         return redirect(url_for('list_pup'))
     return render_template('delete.html',form=form)     
         
-       
+if __name__ == "__main__":
+    app.run(debug=True)       
 
