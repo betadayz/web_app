@@ -2,7 +2,8 @@ from flask_wtf import FlaskForm
 from wtforms import StringField,IntegerField,SubmitField
 
 class AddForm(FlaskForm):
-    name = StringField('name of Puppy: ')
+    name = StringField('Name Of Puppy ')
+    submit = SubmitField('Add Puppy')
     
 
 class DelForm(FlaskForm):

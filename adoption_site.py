@@ -52,7 +52,7 @@ def add_pup():
         db.session.add(new_pup)
         de.session.commit()
         return redirect(url_for('list_pup'))
-    
+    return render_template('add.html',form=form)
     
 @app.route('/list')
 def list_pup():
