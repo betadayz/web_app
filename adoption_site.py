@@ -50,14 +50,14 @@ def add_pup():
         name = form.name.data
         new_pup = Puppy(name)
         db.session.add(new_pup)
-        de.session.commit()
+        db.session.commit()
         return redirect(url_for('list_pup'))
     return render_template('add.html',form=form)
     
 @app.route('/list')
 def list_pup():
     puppies = Puppy.query.all()
-    return render_template('list.html',puppies=puppy)
+    return render_template('list.html',puppies=puppies)
 
 @app.route('/delete',methods=['GET','POST'])
 def del_pup():
